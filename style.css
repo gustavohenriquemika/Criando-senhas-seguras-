@@ -1,0 +1,191 @@
+
+body {
+  background-color: #0f111a;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card-gerador {
+  background-color: #1a1d29;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 450px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 0;
+  color: #00ff87;
+}
+
+.container-saida {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#campo-senha {
+  flex: 1;
+  background-color: #0f111a;
+  border: 2px solid #2a2f45;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 18px;
+  font-family: monospace;
+  text-align: center;
+}
+
+#btn-copiar {
+  background-color: #2a2f45;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#btn-copiar:hover {
+  background-color: #3e4563;
+}
+
+.controle-tamanho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.botoes-tamanho {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-ajuste {
+  background-color: #00ff87;
+  color: #121212;
+  border: none;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.opcao-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.crypto-mode {
+  border-top: 1px solid #2a2f45;
+  padding-top: 10px;
+  color: #60efff;
+}
+
+.container-forca {
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.barra-base {
+  width: 100%;
+  height: 10px;
+  background-color: #2a2f45;
+  border-radius: 8px;
+  margin-top: 8px;
+  transition: all 0.4s ease;
+}
+
+.barra-base.fraca {
+  background-color: #ff0055;
+  box-shadow: 0 0 10px #ff0055;
+}
+
+.barra-base.media {
+  background-color: #ffcc00;
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+.barra-base.forte {
+  background-color: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.botao-gerar {
+  width: 100%;
+  background-color: #00ff87;
+  color: #121212;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 255, 135, 0.3);
+  transition: all 0.3s ease;
+}
+
+.botao-gerar:hover:not(:disabled) {
+  background-color: #60efff;
+  box-shadow: 0 0 25px rgba(96, 239, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.botao-gerar:disabled {
+  background-color: #444444;
+  color: #888888;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+
+.historico-container {
+  margin-top: 25px;
+  border-top: 1px solid #2a2f45;
+  padding-top: 15px;
+}
+
+.historico-container h3 {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 10px;
+}
+
+#lista-historico {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#lista-historico li {
+  background-color: #0f111a;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #aaaaaa;
+  text-align: center;
+}
