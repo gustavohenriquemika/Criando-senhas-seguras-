@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senhas Ultra Seguro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card-gerador">
+    <h1>Gerador de Senhas</h1>
+    
+    <!-- Campo de Saída com Botão de Copiar -->
+    <div class="container-saida">
+      <input type="text" id="campo-senha" readonly value="Clique em Gerar">
+      <button id="btn-copiar">Copiar</button>
+    </div>
+
+    <!-- Controle de Tamanho com botões +/- -->
+    <div class="controle-tamanho">
+      <p>Quantidade de caracteres: <span id="valor-tamanho">12</span></p>
+      <div class="botoes-tamanho">
+        <button id="btn-menos" class="btn-ajuste">-</button>
+        <button id="btn-mais" class="btn-ajuste">+</button>
+      </div>
+    </div>
+
+    <!-- Opções de Customização (Checkboxes) -->
+    <div class="container-opcoes">
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-maiusculas" checked>
+        <label for="chk-maiusculas">Letras Maiúsculas (A-Z)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-minusculas" checked>
+        <label for="chk-minusculas">Letras Minúsculas (a-z)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-numeros" checked>
+        <label for="chk-numeros">Números (0-9)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-simbolos" checked>
+        <label for="chk-simbolos">Símbolos Especiais (!@#$...)</label>
+      </div>
+      <div class="opcao-checkbox crypto-mode">
+        <input type="checkbox" id="chk-crypto">
+        <label for="chk-crypto">Apenas Hexadecimal (Modo Criptográfico)</label>
+      </div>
+    </div>
+
+    <!-- Barra de Força da Senha Baseada em Entropia -->
+    <div class="container-forca">
+      <p id="texto-forca">Força da Senha: Insegura</p>
+      <div id="barra-forca" class="barra-base"></div>
+    </div>
+
+    <!-- Botão de Ação Principal -->
+    <button id="btn-gerar" class="botao-gerar">Gerar Senha</button>
+
+    <!-- Histórico das últimas senhas -->
+    <div class="historico-container">
+      <h3>Últimas Senhas Geradas</h3>
+      <ul id="lista-historico">
+        <!-- Inserido dinamicamente via JS -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
